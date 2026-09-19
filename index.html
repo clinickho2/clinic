@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Dr. Linda Kho Pediatric Rheumatology Center</title>
+<noscript><meta http-equiv="refresh" content="0;url=https://opportunity-pastor-changed-leo.trycloudflare.com"></noscript>
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:system-ui,Segoe UI,Arial,sans-serif;background:#f8fafc;color:#0f172a}
+main{max-width:26rem;padding:1.5rem;text-align:center}
+h1{font-size:1.3rem;margin:0 0 .75rem}
+a.go{display:inline-block;margin:.75rem 0;padding:.8rem 1.4rem;border-radius:.6rem;background:#0f766e;color:#fff;font-weight:600;text-decoration:none}
+small{display:block;color:#64748b;margin-top:.5rem}
+@media (prefers-color-scheme: dark){body{background:#0b1220;color:#eef2f8}a.go{background:#5eead4;color:#0b1220}small{color:#8b98b4}}
+</style></head>
+<body><main>
+<h1>Dr. Linda Kho Pediatric Rheumatology Center</h1>
+<p id="msg">Opening the clinic app...</p>
+<a class="go" id="go" href="https://opportunity-pastor-changed-leo.trycloudflare.com">Open the clinic app</a>
+<small id="note">If you see an error page, the clinic computer may be off or restarting. Wait a minute and try again.</small>
+<script>
+fetch("address.json?t=" + Date.now(), { cache: "no-store" })
+  .then(function (r) { return r.json(); })
+  .then(function (j) {
+    if (j && typeof j.address === "string" && /^https:\/\/[a-z0-9.-]+$/.test(j.address)) {
+      document.getElementById("go").href = j.address;
+      document.getElementById("note").textContent = "Address updated " + (j.updated || "");
+      location.replace(j.address);
+    }
+  })
+  .catch(function () { document.getElementById("msg").textContent = "Use the button below."; });
+</script>
+</main></body></html>
